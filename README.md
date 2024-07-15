@@ -13,3 +13,5 @@
 - [Screenshots](https://github.com/rdWei/painTUI#Screenshots)
 - [Keybindings](https://github.com/rdWei/painTUI#Keybindings)
 - [Compilation Linux](https://github.com/rdWei/painTUI#Compilation-Linux)
+- [TODO](https://github.com/rdWei/painTUI#TODO)
+
