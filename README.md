@@ -27,6 +27,7 @@ painTUI was primarily developed as an educational project to study the C program
 - Change background color. 
 - Change brush color.
 - Paintbrush tool.
+- Erase tool.
 - [Future feature](https://github.com/rdWei/painTUI#TODO)
 
 ## Screenshots
@@ -53,7 +54,7 @@ To compile painTUI on Linux, use the following command: `gcc main.c -o painTUI -
 
 - [ ] Saving and loading paintings.
 - [ ] Export painting to image format.
-- [ ] Erase tool.
+- [X] Erase tool.
 - [ ] Geometric shapes (line, square, triangle)
 - [ ] TUI color palette.
 
