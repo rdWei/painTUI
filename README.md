@@ -9,6 +9,6 @@
 | |                                  
 |_|                                  
 <br>
-An Easy-to-Use Discord-Based Backdoor Tool
+Simple terminal-based paint-like program.
  </pre>
 </div>
