@@ -7,13 +7,14 @@
 
 
 ## Index
-- [Description](https://github.com/rdWei/painTUI#Description)
-    - [Why?](https://github.com/rdWei/painTUI#Why?)
-- [Features](https://github.com/rdWei/painTUI#Features)
-- [Screenshots](https://github.com/rdWei/painTUI#Screenshots)
-- [Keybindings](https://github.com/rdWei/painTUI#Keybindings)
-- [Compilation Linux](https://github.com/rdWei/painTUI#Compilation-Linux)
-- [TODO](https://github.com/rdWei/painTUI#TODO)
+- [Description](#description)
+    - [Why?](#why)
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [Keybindings](#keybindings)
+- [Compilation Linux](#compilation-linux)
+- [TODO](#todo)
+- [Contributing](#contributing)
 
 ## Description
 painTUI is a terminal-based painting program designed for creating simple graphical art directly from the command line. Leveraging the ncurses library, painTUI offers a text-based user interface that allows users to draw, using keyboard and mouse inputs.
@@ -55,3 +56,6 @@ To compile painTUI on Linux, use the following command: `gcc main.c -o painTUI -
 - [ ] Erase tool.
 - [ ] Geometric shapes (line, square, triangle)
 - [ ] TUI color palette.
+
+## Contributing
+If you'd like to contribute, you can submit a [pull request](https://github.com/rdWei/painTUI/pulls) with your changes or open an [issue](https://github.com/rdWei/painTUI/pulls) to report any problems or feature requests.
