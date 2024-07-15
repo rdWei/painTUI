@@ -36,21 +36,21 @@ int main() {
     WINDOW* tela = newwin(max_y - 2, max_x - 7, 1, 1);
     WINDOW* palette = newwin(10, 3, max_y / 2 - 5, max_x - 5);
 
-    int c = '/';
+    int key = '/';
 
     int current_tela_bg = 12;
     int current_color = 11;
 
-    for (;;) {
+    while(key != 'q') {
         box(tela, 0, 0);
         wrefresh(tela);
         printPalette(palette);
 
-        if (c == 'q') {
+        if (key == 'q') {
             printf("\033[?1003l\n");
             endwin();
             return 0;
-        } else if (c == 't') {
+        } else if (key == 't') {
             if (current_tela_bg >= 17) {
                 current_tela_bg = 11;
             }
@@ -59,7 +59,7 @@ int main() {
             current_tela_bg++;
         }
 
-        switch (c) {
+        switch (key) {
             case 'c': current_color = 14; break;
             case 'r': current_color = 13; break;
             case 'g': current_color = 15; break;
@@ -67,9 +67,9 @@ int main() {
             case 'y': current_color = 17; break;
         }
 
-        if (c == ERR) {
+        if (key == ERR) {
             // No action if there are no events
-        } else if (c == KEY_MOUSE) {
+        } else if (key == KEY_MOUSE) {
             if (getmouse(&event) == OK) {
                 if (event.bstate & BUTTON1_PRESSED) {
                     left_button_pressed = 1;
@@ -90,7 +90,7 @@ int main() {
 
         box(palette, 0, 0);
         wrefresh(palette);
-        c = wgetch(stdscr);
+        key = wgetch(stdscr);
     }
 
     printf("\033[?1003l\n");
