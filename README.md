@@ -46,6 +46,7 @@ painTUI was primarily developed as an educational project to study the C program
 - **`g`**: Set paintbrush color to green.
 - **`j`**: Use eraser.
 - **`q`**: Quit.
+- **`SPACE`**: Toggle paint mode
 
 ## Compilation Linux
 

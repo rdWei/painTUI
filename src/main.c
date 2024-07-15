@@ -6,6 +6,7 @@ void printPalette(WINDOW * win);
 int main() {
   initscr();
   cbreak();
+  curs_set(0);
   raw();
   noecho();
   start_color();
@@ -46,6 +47,8 @@ int main() {
 
   refresh();
 
+  int write = 0;
+
   while (key != 'q') {
     box(tela, 0, 0);
     wrefresh(tela);
@@ -62,6 +65,8 @@ int main() {
       current_tela_bg++;
       wbkgd(tela, COLOR_PAIR(current_tela_bg));
       wclear(tela);
+    } else if(key == 32) {
+      write = !write;
     }
 
     switch (key) {
@@ -89,23 +94,17 @@ int main() {
       // No action if there are no events
     } else if (key == KEY_MOUSE) {
       if (getmouse( & event) == OK) {
-        if (event.bstate & BUTTON1_PRESSED) {
-          left_button_pressed = 1;
-        } else if (event.bstate & BUTTON1_RELEASED) {
-          left_button_pressed = 0;
-        }
-
-        if (left_button_pressed) {
+        if (write) {
           if (event.y >= 1 && event.y < max_y - 1 && event.x >= 1 && event.x < max_x - 7) {
             wattron(tela, COLOR_PAIR(current_color));
-            mvwprintw(tela, event.y - 1, event.x - 1, " ");
+            mvwprintw(tela, event.y - 3, event.x - 1, " ");
             wattroff(tela, COLOR_PAIR(current_color));
             wrefresh(tela);
           }
         }
       }
     }
-
+    // move(event.y - 1, event.x - 1);
     key = wgetch(stdscr);
   }
 
