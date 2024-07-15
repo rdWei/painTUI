@@ -6,6 +6,7 @@ void printPalette(WINDOW * win);
 int main() {
   initscr();
   cbreak();
+  raw();
   noecho();
   start_color();
   init_pair(1, COLOR_WHITE, COLOR_WHITE);
@@ -78,6 +79,9 @@ int main() {
       break;
     case 'y':
       current_color = 17;
+      break;
+    case 'j':
+      current_color = current_tela_bg;
       break;
     }
 
