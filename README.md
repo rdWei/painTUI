@@ -48,7 +48,7 @@ painTUI was primarily developed as an educational project to study the C program
 
 ## Compilation Linux
 
-To compile painTUI on Linux, use the following command: `gcc main.c -o painTUI -lncurses`
+To compile painTUI on Linux, use the following command: `./build.sh`
 
 ## TODO
 
